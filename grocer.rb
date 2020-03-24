@@ -64,7 +64,20 @@ end
 
 def apply_clearance(cart)
   new_array = []
-  
+  counter = 0
+  while counter < cart.length do
+    new_array << cart[counter]
+    counter += 1
+  end
+  counter2 = 0
+  while counter2 < array.length do
+    discounted_price = 0.0
+    if array[counter2][:clearance] == true
+      discounted_price = array[counter2][:price] - (array[counter2][:price] * 0.2)
+      array[counter2][:price] = discounted_price.round(2)
+    end
+    counter2 += 1
+  end
 end
 
 def checkout(cart, coupons)
