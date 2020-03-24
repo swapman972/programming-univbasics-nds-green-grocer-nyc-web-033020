@@ -70,10 +70,10 @@ def apply_clearance(cart)
     counter += 1
   end
   counter2 = 0
-  while counter2 < array.length do
+  while counter2 < new_array.length do
     discounted_price = 0.0
     if new_array[counter2][:clearance] == true
-      discounted_price = new_array[counter2][:price] - (array[counter2][:price] * 0.2)
+      discounted_price = new_array[counter2][:price] - (new_array[counter2][:price] * 0.2)
       new_array[counter2][:price] = discounted_price.round(2)
     end
     counter2 += 1
